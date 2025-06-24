@@ -1,0 +1,120 @@
+.address-container {
+    position: absolute;
+    z-index: 4;
+    width: max-content;
+    display: none;
+    right:0;
+}
+
+.address-container.active {
+    display: block;
+}
+
+
+/*.address-detail-btn:hover + div .address-container,*/
+.address-detail-btn:focus + div .address-container {
+    display: block;
+}
+
+.info-table tbody tr {
+    vertical-align: top;
+}
+
+.time {
+    color: var(--bold-color);
+}
+
+.finish-color,
+.green-color {
+    color: #47d864;
+}
+
+.prepare-color,
+.yellow-color {
+    color: #ffc021
+}
+
+.canceled-color,
+.orange-color {
+    color: #ff623d;
+}
+
+.delivery-color,
+.blue-color {
+    color: #4154f1;
+
+}
+
+.waiting-color,
+.gray-color {
+    color: #cccccc;
+
+}
+
+.btn-status-1 {
+    color: #fff;
+    background-color: #ffc021;
+}
+
+.btn-status-2 {
+    color: #fff;
+    background-color: #4154f1;
+}
+
+.btn-status-3 {
+    color: #fff;
+    background-color: #47d864;
+}
+
+.btn-status-11 {
+    color: #fff;
+    background-color: #ff623d;
+}
+
+.btn-status--1 {
+    display: none;
+}
+
+.btn-status-1:hover,
+.btn-status-2:hover,
+.btn-status-3:hover,
+.btn-status--1:hover {
+    opacity: 0.3;
+}
+
+.btn-status-1,
+.btn-status-2,
+.btn-status-3,
+.btn-status--11 {
+    margin: 5px auto;
+}
+
+.btn:hover {
+    opacity: 0.3;
+}
+
+.status-1 {
+    color: #ffc021;
+}
+
+.status-2 {
+    color: #4154f1;
+}
+
+.status-3 {
+    color: #47d864;
+}
+
+.status-11 {
+    color: #ff623d;
+}
+
+.status-0,
+.status--99 {
+    color: black;
+}
+
+#detail-modal label {
+    color: var(--bold-color);
+}
+

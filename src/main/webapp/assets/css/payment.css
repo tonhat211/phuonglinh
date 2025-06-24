@@ -1,0 +1,223 @@
+.seperate-horizontal-linear {
+    border: 1px solid #0d6efd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.receiver,
+.phone {
+    font-weight: 600;
+}
+
+.seperate-horizontal {
+    width: 100%;
+    margin: 15px 0;
+    border: 0.5px solid rgba(204, 204, 204, 0.25);
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-70 {
+    width:70%;
+}
+
+.payment-result {
+    color: var(--text-color-2);
+    font-size: 15px;
+}
+
+.payment-result p {
+    margin: 10px 0;
+}
+
+
+.total-money {
+    font-size: 25px;
+    color: var(--bold-color);
+    font-weight: 600;
+}
+
+.note {
+    font-size: 12px;
+    font-style: italic;
+    color: #5d94ee;
+}
+
+/* update info */
+#modal-container2 .sub-content {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--content-bg-color);
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+#modal-container2 .modall {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(182, 182, 182, 0.91);
+    z-index: 3;
+    display: none;
+    animation: modalFadeIn ease 0.49s;
+    height: 100vh;
+}
+
+#modal-container2 .overlay {
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(204, 204, 204, 0.6);
+    z-index: 1;
+    display: none;
+    animation: modalFadeIn ease 0.49s;
+
+}
+
+#modal-container2 .modall-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 10px;
+    height: 65%;
+    /*box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);*/
+}
+
+#modal-container2 .modall.active,
+#modal-container2 .overlay.active {
+    display: block;
+
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#modal-container2 .update-container {
+    height: 85%;
+}
+
+#modal-container2 .address-item {
+    margin-top: 15px;
+}
+
+#modal-container2 .update-action i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 7px;
+    margin: 5px 0;
+}
+
+#modal-container2 .btn-edit {
+    color: var(--text-color-2);
+    background-color: var(--primary-bg-color);
+}
+
+#modal-container2 .btn-delete {
+    color: white;
+    background-color: red;
+}
+
+#modal-container2 {
+    height: 100%;
+}
+
+#modal-container2 .update-action i:hover {
+    opacity: 0.3;
+    cursor: pointer;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+.address-item:hover {
+    background-color: var(--transparent-yellow-color);
+    cursor: pointer;
+}
+
+.address-item.active {
+    background-color: var(--transparent-yellow-color);
+}
+
+#address-container2 {
+    height: 100%;
+    overflow: auto;
+}
+
+#address-container2::-webkit-scrollbar {
+    width: 2px;
+}
+
+#address-container2::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+#address-container2::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+#address-container2::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#modal-container2 .modal-confirm {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: var(--hover-color);
+    display: none;
+}
+
+#modal-container2 .modal-confirm.active {
+    display: block;
+}
+
+.btn-confirm-delete {
+    color: white;
+    background-color: red;
+}
+
+.btn-confirm-delete:hover,
+.btn-third:hover,
+.btn-edit:hover {
+    opacity: 0.3;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+.message-error {
+    color: red;
+    width: fit-content;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+    background-color: rgba(255, 0, 0, 0.22);
+}
+
+.btn-change-address:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.exhausted * {
+    background-color: rgb(255, 204, 204) !important;
+}

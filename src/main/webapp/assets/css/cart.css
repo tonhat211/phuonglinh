@@ -1,0 +1,180 @@
+.form-check-input {
+    position: unset !important;
+    margin-top: unset !important;
+    margin-left: unset !important;
+}
+
+
+.content-container .sub-content {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--content-bg-color);
+    border-radius: 10px;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+    margin-top: 0;
+}
+
+.cart__container {
+    padding: 20px;
+    margin: auto;
+}
+
+.center-title {
+    text-align: center;
+}
+
+.col-base {
+    width: 8.33%;
+    text-align: center;
+    vertical-align: middle;
+    height: 100px;
+}
+
+.product-option {
+    font-size: 13px;
+    color: var(--text-color-2);
+}
+
+.product-name,
+.price-unit {
+    font-size: 20px;
+}
+
+
+
+.product-qty-buying {
+    width: 50%;
+    padding: 10px;
+
+}
+
+.qty-control {
+    justify-content: center;
+    border: 1px solid black;
+    width: fit-content;
+}
+
+.qty-control i {
+    padding: 4px;
+    font-size: 17px;
+    border: none;
+
+}
+
+.asking-btn:hover,
+.add-to-cart-btn:hover,
+.qty-control i:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.qty-input {
+    font-size: 17px;
+    text-align: center;
+    border-left: 1px solid var(--text-color-2);
+    border-right: 1px solid var(--text-color-2);
+    border-top: none;
+    border-bottom: none;
+    width: 40px;
+    outline: none;
+    border-radius: 0;
+}
+
+.qty-input:focus-visible {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.table {
+    width: 100%;
+}
+
+table, th, td{
+    /*border-top:1px solid #ccc;*/
+    border-bottom:1px solid #e5e8ff;
+    padding: 5px;
+
+}
+
+table{
+    border-collapse:collapse;
+}
+
+.table tr {
+    margin: 10px 10px;
+    box-shadow: 0px 0px 14px 0px #e5e8ff;
+}
+
+.table td {
+    text-align: center;
+}
+
+
+
+.roww th,
+.roww td {
+    background-color: #fcf7f7;
+    padding: 6px;
+    border: none;
+}
+
+.money {
+    background-color: white;
+    box-shadow: 0px 0px 14px 0px #e5e8ff;
+    padding: 0 20px;
+    padding-left: 10px;
+
+
+}
+
+.money h2 {
+    margin-bottom: 80px;
+}
+
+#totalMoney {
+    font-size: 24px;
+}
+
+.btn-buy {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 6px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+}
+
+.btn-buy:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.money p {
+    margin-top: 20px;
+}
+
+.delete {
+    padding: 10px;
+
+}
+
+.delete:hover {
+    background-color: #C6CBFB;
+    opacity: 0.3;
+    border-radius: 6px;
+}
+
+.deleteProductBtn:hover {
+    background: var(--hover-color);
+    padding: 4px;
+    border-radius: 4px;
+    color: var(--primary-color);
+    cursor: pointer;
+}

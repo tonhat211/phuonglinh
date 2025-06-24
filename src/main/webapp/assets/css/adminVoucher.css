@@ -1,0 +1,21 @@
+.update-tool {
+    justify-content: space-around;
+    display: none !important;
+    margin: 5px 0;
+}
+
+.update-tool.active {
+
+    display: flex !important;
+
+}
+
+.editor {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    white-space: pre-wrap;
+}

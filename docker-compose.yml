@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jsp-servlet-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+
+  db:
+    image: mariadb:10.5   # Cập nhật thành mariadb thay vì mysql
+    container_name: mariadb-db  # Đổi tên container nếu cần
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}        # Tên cơ sở dữ liệu
+      MYSQL_USER: ${DATABASE_USER}            # Tên người dùng
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}    # Mật khẩu người dùng
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}    # Mật khẩu root
+    ports:
+      - "3306:3306"  # Mở cổng 3306 để kết nối
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql  # Lưu trữ dữ liệu
+volumes:
+  db_data:

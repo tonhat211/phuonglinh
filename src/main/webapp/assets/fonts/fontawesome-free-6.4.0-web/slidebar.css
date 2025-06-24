@@ -1,0 +1,79 @@
+/*slidebar*/
+.prd__slidebar {
+    position: relative;
+}
+
+.prd__slidebar-list {
+    /*position: relative;*/
+    /*display: */
+}
+
+.prd__sliderbar-item.active {
+    display: block;
+}
+
+.prd__sliderbar-item {
+    /*position: absolute;*/
+    width: 100%;
+    display: none;
+}
+
+.prd__sliderbar-item img {
+    width: 100%;
+}
+
+.prd__slidebar-indicator {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prd__slidebar-indicator-list {
+
+    display: flex;
+}
+
+.prd__slidebar-indicator-item {
+    padding: 7px;
+    list-style: none;
+}
+
+.prd__slidebar-indicator-list i {
+    opacity: 0.4;
+    color: #eeeeee;
+    font-size: 16px;
+    animation: ease-in-out 0.3s;
+}
+
+.prd__slidebar-indicator-item.active i {
+    opacity: 1;
+}
+
+.move-left {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 40px);
+}
+
+.move-right i,
+.move-left i {
+    font-size: 60px;
+    opacity: 0.4;
+    color: #7F7F7F;
+}
+
+.move-right i:hover,
+.move-left i:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.move-right {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 40px);
+}

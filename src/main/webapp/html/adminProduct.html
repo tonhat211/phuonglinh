@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quản lý sản phẩm</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/fonts/fonts-bootstrap/bootstrap-icons.min.css">
+  <link href="../assets/css/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/css/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/css/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/modal.css" rel="stylesheet">
+
+
+
+  <link href="../assets/css/adminBase.css" rel="stylesheet">
+  <link href="../assets/css/adminProduct.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top flex-roww" style="justify-content: space-between">
+  <a href="" class="logo grid-col-2 pd0">
+      <img src="../assets/img/logo/Logo-The-Gioi-Di-Dong-MWG-B-H.webp" alt="" style="color:black;">
+  </a>
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="display: none">
+          <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+              <i class="bi bi-person"></i>
+              <span>Quản lý tài khoản</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Đăng xuất</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header>
+<!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<div class="flex-roww">
+  <aside id="sidebar" class="sidebar grid-col-2">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <h3 style="text-align: center">[Admin]</h3>
+      <li class="nav-item ">
+        <a class="nav-link " href="admin_dashboard.html">
+          <!--                <i class="bi bi-grid"></i>-->
+          <span>Thống kê doanh thu</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="adminCustomer.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý khách hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminEmployee.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý nhân viên</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminProduct.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminOrder.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý đơn hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminNews.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý tin tức</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminHomes.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminAboutUs.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Nhà phân phối</span>
+        </a>
+      </li>
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main grid-col-10">
+
+    <div class="pagetitle grid-col-3">
+      <h1>Quản lý sản phẩm</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý sản phẩm</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <div class="sub-content">
+      <div class="flex-roww" style="justify-content: space-between">
+        <form class="search-bar grid-col-4 ">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="" placeholder="Bạn tìm gì...">
+        </form>
+        <a href="" onclick="openModal('#add-modal');">Thêm sản phẩm</a>
+      </div>
+      <div class="info-container">
+        <table style="width: 100%;" id="infoTable" class="info-table">
+          <thead>
+          <tr>
+            <th scope="col" class="grid-col-0_5 text-center" style="height: fit-content;">STT</th>
+            <th scope="col" class="grid-col-0_5 text-center">ID</th>
+            <th scope="col" class="grid-col-0_5 text-center">Ảnh</th>
+            <th scope="col" class="grid-col-1_5">Tên</th>
+            <th scope="col" class="grid-col-1">Phiên bản</th>
+            <th scope="col" class="grid-col-1 text-center">Ram(GB)</th>
+            <th scope="col" class="grid-col-1 text-center">Rom(GB)</th>
+            <th scope="col" class="grid-col-1 text-center">Số lượng</th>
+            <th scope="col" class="grid-col-1">Thương hiệu</th>
+            <th scope="col" class="grid-col-1">Phân loại</th>
+<!--            <th scope="col" class="grid-col-0_5 text-center">Nổi bật</th>-->
+            <th scope="col" class="grid-col-1">Thao tác</th>
+          </tr>
+          </thead>
+          <tbody class="group">
+            <tr class="group" id="detail-container">
+              <td style="width: 100%" colspan="11">
+                <form action="">
+                  <table id="detail-table">
+                    <thead>
+                    <tr>
+                      <th scope="col" class="grid-col-0_5 text-center" style="height: fit-content;">STT</th>
+                      <th scope="col" class="grid-col-0_5 text-center">ID</th>
+                      <th scope="col" class="grid-col-1">Màu</th>
+                      <th scope="col" class="grid-col-1 text-center">Ram(GB)</th>
+                      <th scope="col" class="grid-col-1 text-center">Rom(GB)</th>
+                      <th scope="col" class="grid-col-1 text-center">Giá</th>
+                      <th scope="col" class="grid-col-1 text-center">Số lượng</th>
+                      <th scope="col" class="grid-col-1">Thao tác</th>
+                    </tr>
+                    </thead>
+                    <tbody class="group">
+                    <tr class="group locked">
+                      <th scope="row" class="grid-col-0_5 text-center" >
+                        <span class="stt">1</span>
+                      </th>
+                      <td class="grid-col-0_5 text-center">
+                        <span class="id">1</span>
+                      </td>
+                      <td class="grid-col-1">
+                        <input class="info-input" type="text" name="color" value="Xanh" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="ram" value="4" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="rom" value="64" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="price" value="8900000" readonly>
+                      </td>
+                      <td class="grid-col-1">
+                        <input class="info-input text-center" type="number" name="qty" value="3" readonly>
+                      </td>
+                      <td class="grid-col-1">
+                        <select name="action" onchange="handleChange(event);" data-default="none">
+                          <option value="none">...</option>
+                          <option value="updatedetail">Cập nhật</option>
+                          <option class="lock-option" value="lockdetail">Khóa</option>
+                          <option class="unlock-option" value="unlockdetail">Mở khóa</option>
+                          <option value="deletedetail">Xóa</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr class="group unlocked">
+                      <th scope="row" class="grid-col-0_5 text-center" >
+                        <span class="stt">1</span>
+                      </th>
+                      <td class="grid-col-0_5 text-center">
+                        <span class="id">1</span>
+                      </td>
+                      <td class="grid-col-1">
+                        <input class="info-input" type="text" name="color" value="Xanh" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="ram" value="4" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="rom" value="64" readonly>
+                      </td>
+                      <td class="grid-col-1 text-center">
+                        <input class="info-input text-center" type="number" name="price" value="8900000" readonly>
+                      </td>
+                      <td class="grid-col-1">
+                        <input class="info-input text-center" type="number" name="qty" value="3" readonly>
+                      </td>
+                      <td class="grid-col-1">
+                        <select name="action" onchange="handleChange(event);" data-default="none">
+                          <option value="none">...</option>
+                          <option value="updatedetail">Cập nhật</option>
+                          <option class="lock-option" value="lockdetail">Khóa</option>
+                          <option class="unlock-option" value="unlockdetail">Mở khóa</option>
+                          <option value="deletedetail">Xóa</option>
+                        </select>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </form>
+
+              </td>
+            </tr>
+
+            <tr class="group unlocked" onclick="showDetail(event);">
+              <th scope="row" class="grid-col-0_5 text-center" >
+                <span class="stt">1</span>
+              </th>
+              <td class="grid-col-0_5 text-center">
+                <span class="id">1</span>
+              </td>
+              <td class="grid-col-0_5">
+                <div class="img-thumbnail-container">
+                  <img src="../assets/img/thumbnail/iphone-11-trang-600x600.jpg" alt="" style="width: 100%">
+                </div>
+              </td>
+              <td class="grid-col-1_5">
+                <span class="name">Iphone 11</span>
+              </td>
+              <td class="grid-col-1">
+                <span class="version">thuong</span>
+              </td>
+              <td class="grid-col-1 text-center">
+                4
+              </td>
+              <td class="grid-col-1 text-center">
+                64 - 128 - 256
+              </td>
+              <td class="grid-col-0_5 text-center">
+                39
+              </td>
+              <td class="grid-col-1">
+                Apple
+              </td>
+              <td class="grid-col-1">
+                Smartphone
+              </td>
+<!--              <td class="grid-col-0_5 text-center">-->
+<!--                99-->
+<!--              </td>-->
+              <td class="grid-col-1" onclick="event.stopPropagation();">
+                <select name="action" onchange="handleChange(event);" data-default="none">
+                  <option value="none">...</option>
+                  <option value="update">Cập nhật</option>
+                  <option class="lock-option" value="lock">Khóa</option>
+                  <option class="unlock-option" value="unlock">Mở khóa</option>
+                  <option value="detail">Chi tiết</option>
+                  <option value="delete">Xóa</option>
+                </select>
+              </td>
+            </tr>
+          <script>
+            
+            function setupAdd(event) {
+              // event.preventDefault();
+              // document.querySelector(".add-form").classList.add("active");
+            }
+
+            // xử lý khi action được chọn
+            function handleChange(event) {
+              event.stopPropagation();
+              let selectedValue = event.target.value;
+              setDefaultOption("action");
+              event.target.value = selectedValue;
+              console.log("selected value: " + selectedValue);
+              const group = event.currentTarget.closest(".group");
+              selectedValue=selectedValue.toUpperCase();
+              switch (selectedValue) {
+                case "UPDATE":
+                  setupUpdate(group,"#update-info-modal");
+                  break;
+                case "LOCK": {
+                  setInfosStatus(group,false);
+                  var name = group.querySelector(".name").innerText;
+                  var version = group.querySelector(".version").innerText;
+                  var object = name + " " + version;
+                  setupConfirm(group,'#lock-confirm-modal',object);
+                  break;
+                }
+                case "UNLOCK": {
+                  setInfosStatus(group,false);
+                  var name = group.querySelector(".name").innerText;
+                  var version = group.querySelector(".version").innerText;
+                  var object = name + " " + version;
+                  setupConfirm(group,'#unlock-confirm-modal',object);
+                  break;
+                }
+                case "DELETE": {
+                  setInfosStatus(group,false);
+                  var name = group.querySelector(".name").innerText;
+                  var version = group.querySelector(".version").innerText;
+                  var object = name + " " + version;
+                  setupConfirm(group,'#delete-confirm-modal',object);
+                  break;
+                }
+                case "UPDATEDETAIL" : {
+                  setInfosStatus(group,true);
+                  break;
+                }
+                case "LOCKDETAIL": {
+                  setInfosStatus(group,false);
+                  var color = group.querySelector("input[name='color']").value;
+                  var ram = group.querySelector("input[name='ram']").value;
+                  var rom = group.querySelector("input[name='rom']").value;
+                  var object = "Phiên bản: màu: " + color + " - ram: " + ram + "(GB) - rom: " + rom + "(GB)";
+                  setupConfirm(group,'#lock-confirm-modal',object);
+                  break;
+                }
+                case "UNLOCKDETAIL": {
+                  setInfosStatus(group,false);
+                  var color = group.querySelector("input[name='color']").value;
+                  var ram = group.querySelector("input[name='ram']").value;
+                  var rom = group.querySelector("input[name='rom']").value;
+                  var object = "Phiên bản: màu: " + color + " - ram: " + ram + "(GB) - rom: " + rom + "(GB)";
+                  setupConfirm(group,'#unlock-confirm-modal',object);
+                  break;
+                }
+                case "DELETEDETAIL": {
+                  setInfosStatus(group,false);
+                  var color = group.querySelector("input[name='color']").value;
+                  var ram = group.querySelector("input[name='ram']").value;
+                  var rom = group.querySelector("input[name='rom']").value;
+                  var object = "Phiên bản: màu: " + color + " - ram: " + ram + "(GB) - rom: " + rom + "(GB)";
+                  setupConfirm(group,'#delete-confirm-modal',object);
+                  break;
+                }
+                default:
+                  setInfosStatus(group,false);
+
+              }
+            }
+
+            function setupUpdate(group,modalID) {
+              var id = group.querySelector(".id").innerText;
+              openModal(modalID);
+              document.querySelector(modalID).querySelector("input[name='id']").value = id;
+
+            }
+
+            // mở modal xác nhận
+            function setupConfirm(group,modalID,object) {
+              // var name = group.querySelector('input[name="name"]').value;
+              openModal(modalID)
+              document.querySelector(modalID).querySelector('.object').innerText = object;
+            }
+
+            function openModal(modalID) {
+              document.querySelector(modalID).classList.add('active');
+            }
+
+            function setInfosStatus(group,status) {
+              const inputs = group.querySelectorAll("input");
+              var status =!status;
+              inputs.forEach((input) => {
+                input.readOnly = status;
+              });
+              group.querySelector("select").disabled = status;
+              group.querySelector("select[name='action']").disabled =false;
+            }
+
+            function setDefaultOption(name) {
+              document.querySelectorAll(`select[name="${name}"]`).forEach(select => {
+                const defaultValue = select.getAttribute('data-default');
+                  select.value = defaultValue;
+              });
+            }
+            // Gọi hàm một lần cho các phần tử hiện có
+            setDefaultOption("gender");
+
+            function showDetail(event) {
+              event.stopPropagation();
+              const detailContainer = document.getElementById("detail-container");
+              detailContainer.classList.toggle("active");
+              console.log(detailContainer);
+              const currentRow = event.currentTarget;
+              currentRow.parentNode.insertBefore(detailContainer, currentRow.nextElementSibling);
+            }
+
+            function hideDetail(element) {
+              document.querySelector(element).classList.remove("active");
+            }
+
+            function removeActive(element) {
+              document.querySelector(element).classList.remove("active");
+            }
+
+          </script>
+          </tbody>
+        </table>
+        <div class="temp" style="display: none;">
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="modall" id="lock-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận khóa </br> <span class="object">Nhi</span></p>
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Khóa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modall" id="unlock-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận mở khóa </br> <span class="object">Nhi</span></p>
+
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn  btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Mở khóa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modall" id="delete-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận xoá </br> <span class="object">Nhi</span></p>
+
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn  btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Xóa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modall" id="update-info-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6 custom-scroll" onclick="event.stopPropagation();">
+          <form action="">
+            <h4 class="confirm-content" style="text-align: center">Cập nhật thông tin sản phẩm</h4>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 10px;">
+              <div class="form-group grid-col-4">
+                <label for="name">Tên</label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Nhập tên sản phẩm" required>
+              </div>
+              <div class="form-group flex-roww grid-col-4">
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" id="id" name="id" aria-describedby="emailHelp" placeholder="ID" value="17" readonly>
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;">
+              <div class="form-group grid-col-4">
+                <label>Thương hiệu</label>
+                <select name="brand" data-default="1">
+                  <option value="1">Samsung</option>
+                  <option value="2">Apple</option>
+                  <option value="3">Oppo</option>
+                  <option value="4">Xiaomi</option>
+                  <option value="5">Realme</option>
+                </select>
+              </div>
+              <div class="form-group grid-col-4">
+                <label>Phân loại</label>
+                <select name="gender" data-default="male">
+                  <option value="1">Smartphone</option>
+                  <option value="2">Tablet</option>
+                  <option value="3">Laptop</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;">
+              <div class="form-group grid-col-4">
+                <label for="date">Ngày mở bán</label>
+                <input type="date" class="form-control" id="date" name="date" value="2024-10-10" placeholder="Nhập ngày mở bán" required>
+              </div>
+              <div class="form-group grid-col-4">
+                <label for="initial-price">Giá mở bán</label>
+                <input type="number" class="form-control" id="initial-price" name="initial-price" value="8900000" placeholder="Nhập giá mở bán" required>
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;" >
+              <div class="form-group grid-col-4">
+                <label>Cấu hình</label>
+                <table id="configTable" class="table">
+                  <thead>
+                    <tr>
+                      <th>Tên</th>
+                      <th>Giá trị</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><input type="text" onkeydown="handleKeyDown(event, 1)"></td>
+                    <td><input type="text" onkeydown="handleKeyDown(event, 2)"></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;" >
+              <div class="form-group grid-col-4">
+                <label>Nổi bật</label>
+                <table id="featureTable" class="table">
+                  <thead>
+                  <tr>
+                    <th>Tên</th>
+                    <th>Giá trị</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;" >
+              <div class="form-group grid-col-4">
+                <label for="prominence">Độ nổi bật</label>
+                <input type="number" class="form-control" id="prominence" name="prominence" value="99" placeholder="Nhập độ nổi bật" required>
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 20px;" >
+              <div class="form-group grid-col-4">
+                <p>Ảnh thumbnail</p>
+                <input id="thumbnailInput" type="file" name="file" accept=".jpg, .jpeg, .png"  onchange="previewImage()" />
+                <div class="thumbnail-img-container grid-col-6" style="margin-top: 15px;">
+                  <img src="../assets/img/thumbnail/iphone-11-trang-600x600.jpg" alt="" id="thumbnailPreview" style="width:100%">
+                </div>
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+              <script>
+                function previewImage() {
+                  var file = document.getElementById('thumbnailInput').files[0];
+                  var reader = new FileReader();
+
+                  reader.onload = function(e) {
+                    var imagePreview = document.getElementById('thumbnailPreview');
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';  // Hiển thị ảnh
+                  }
+
+                  if (file) {
+                    reader.readAsDataURL(file);
+                  }
+                }
+
+              </script>
+
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 20px;" >
+              <div class="form-group">
+                <p>Ảnh chi tiết</p>
+                <input id="detailImageInput" type="file" name="file" accept=".jpg, .jpeg, .png" multiple  onchange="previewImages()"/>
+                <div id="detailImagePreview" class="grid_row" style="margin-top: 15px;">
+                </div>
+              </div>
+
+              <script>
+                // Lưu trữ các file đã chọn
+                var selectedFiles = [];
+
+                function previewImages() {
+                  var files = document.getElementById('detailImageInput').files;
+                  var container = document.getElementById('detailImagePreview');
+                  container.innerHTML = ''; // Xóa các ảnh cũ nếu có
+                  selectedFiles = []; // Reset lại mảng file đã chọn
+
+                  for (var i = 0; i < files.length; i++) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                      var imgContainer = document.createElement('div');
+                      imgContainer.classList.add('image-container');
+
+                      var img = document.createElement('img');
+                      img.src = e.target.result;
+                      img.alt = 'Selected Image';
+                      imgContainer.appendChild(img);
+
+                      // Tạo nút xóa
+                      var deleteBtn = document.createElement('button');
+                      deleteBtn.classList.add('delete-btn');
+                      deleteBtn.innerText = 'X';
+
+                      deleteBtn.onclick = function() {
+                        // Xóa ảnh khi nhấn nút
+                        imgContainer.remove();
+                        // Cập nhật lại mảng selectedFiles và input
+                        selectedFiles = selectedFiles.filter(file => file !== e.target.result);
+                        updateInputValues();
+                      }
+
+                      imgContainer.appendChild(deleteBtn);
+                      container.appendChild(imgContainer); // Thêm ảnh vào container
+
+                      // Lưu file vào mảng selectedFiles
+                      selectedFiles.push(e.target.result);
+                    }
+
+                    reader.readAsDataURL(files[i]);
+                  }
+
+                  updateInputValues();
+                }
+
+                function updateInputValues() {
+                  var input = document.getElementById('imageInput');
+                  var dataTransfer = new DataTransfer(); // Dùng DataTransfer để cập nhật lại giá trị của input
+
+                  // Thêm lại các file còn lại vào input
+                  selectedFiles.forEach(file => {
+                    var fileObj = new File([file], "image.jpg", {type: "image/jpeg"});
+                    dataTransfer.items.add(fileObj);
+                  });
+
+                  input.files = dataTransfer.files; // Cập nhật lại files trong input
+                }
+
+
+
+              </script>
+
+            </div>
+
+
+
+            <p>Mô tả</p>
+            <div class="toolbar">
+              <button onclick="document.execCommand('bold')"><b>B</b></button>
+              <button onclick="document.execCommand('italic')"><i>I</i></button>
+              <button onclick="document.execCommand('underline')"><u>U</u></button>
+            </div>
+
+            <div contenteditable="true" id="editor" class="editor" placeholder="Bắt đầu soạn thảo văn bản ở đây..."></div>
+            <br>
+            <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+              <button class="btn  btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+              <button class="btn btn-primary btn-confirm" onclick="" type="button">Lưu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modall active" id="add-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6 custom-scroll" style="max-height:90%" onclick="event.stopPropagation();">
+          <form action="" id="addProductForm">
+            <h4 class="confirm-content" style="text-align: center">Thêm sản phẩm sản phẩm mới</h4>
+            <div class="flex-roww" style="justify-content: space-between; margin-top: 10px;">
+              <div class="form-group grid-col-4">
+                <label>Tên</label>
+                <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Nhập tên sản phẩm" required>
+              </div>
+              <div class="form-group flex-roww grid-col-4">
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <p>Phiên bản:</p>
+              <div class="group">
+                <div class="flex-roww version-input-container group">
+                  <div class="grid-col-0_5 flex-roww" style="justify-content: center;">
+                    <i class="bi bi-plus-circle-fill btn-add-version active" onclick="addMoreConfig(event);"></i>
+                    <i class="bi bi-dash-circle-fill btn-remove-version" onclick="removeConfig(event)"></i>
+                  </div>
+                  <div class="grid-col-11" style="border-left: 1px solid var(--bold-color);padding-left: 4px;">
+                    <input type="text" name="version" placeholder="Phiên bản">
+                    <div class="flex-roww group" style="justify-content: space-between;margin-top: 10px">
+                      <input class="grid-col-2" type="text" name="color" placeholder="Màu">
+                      <input class="grid-col-2" type="text" name="ram" placeholder="Ram(GB)">
+                      <input class="grid-col-2" type="text" name="rom" placeholder="Rom(GB)">
+                      <input class="grid-col-2" type="text" name="price" placeholder="Giá">
+                      <input class="grid-col-2" type="text" name="qty" placeholder="Số lượng">
+                      <i class="bi bi-plus-circle-fill btn-add-version active" onclick="addMoreConfigDetail(event)"></i>
+                      <i class="bi bi-dash-circle-fill btn-remove-version" onclick="removeConfigDetail(event)"></i>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function addMoreConfigDetail(event) {
+                const group = event.currentTarget.closest('.group');
+                const newDetail = group.cloneNode(true);
+                clearInput(newDetail);
+                group.parentNode.appendChild(newDetail);
+                const btnRemove = group.querySelector('.btn-remove-version');
+                plusToMinus(event.currentTarget,btnRemove);
+              }
+
+              function removeConfigDetail(event) {
+                const group = event.currentTarget.closest('.group');
+                group.parentNode.removeChild(group);
+              }
+
+              function clearInput(group) {
+                const inputs = group.querySelectorAll("input");
+                inputs.forEach(input => { input.value = "";});
+              }
+
+              function plusToMinus(plus,minus) {
+                plus.classList.remove('active');
+                minus.classList.add('active');
+              }
+
+              function minusToPlus(minus,plus) {
+                minus.classList.remove('active');
+                plus.classList.add('active');
+              }
+
+              function addMoreConfig(event) {
+                const group = event.currentTarget.closest('.group');
+                const newConfig = group.cloneNode(true);
+                let configDetails = newConfig.querySelectorAll('.group');
+                for(let i=0;i<configDetails.length-1;i++) {
+                  configDetails[i].parentNode.removeChild(configDetails[i]);
+                }
+                clearInput(newConfig);
+                group.parentNode.appendChild(newConfig);
+                const btnRemove = event.currentTarget.parentNode.querySelector('.btn-remove-version');
+                plusToMinus(event.currentTarget,btnRemove);
+              }
+
+              function removeConfig(event) {
+                const group = event.currentTarget.closest('.group');
+                group.parentNode.removeChild(group);
+              }
+
+            </script>
+
+
+            <div class="flex-roww" style="justify-content: space-between; margin-top: 15px;">
+              <div class="form-group grid-col-4">
+                <label>Thương hiệu</label>
+                <select name="brand" data-default="1">
+                  <option value="1">Samsung</option>
+                  <option value="2">Apple</option>
+                  <option value="3">Oppo</option>
+                  <option value="4">Xiaomi</option>
+                  <option value="5">Realme</option>
+                </select>
+              </div>
+              <div class="form-group grid-col-4">
+                <label>Phân loại</label>
+                <select name="gender" data-default="male">
+                  <option value="1">Smartphone</option>
+                  <option value="2">Tablet</option>
+                  <option value="3">Laptop</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-between; margin-top: 15px;">
+              <div class="form-group grid-col-4">
+                <label>Ngày mở bán</label>
+                <input type="date" class="form-control" name="date" value="2024-10-10" placeholder="Nhập ngày mở bán" required>
+              </div>
+              <div class="form-group grid-col-4">
+                <label>Giá mở bán</label>
+                <input type="number" class="form-control" name="initial-price" value="8900000" placeholder="Nhập giá mở bán" required>
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;" >
+              <div class="form-group grid-col-4">
+                <label>Cấu hình</label>
+                <table class="configTable" class="table">
+                  <thead>
+                  <tr>
+                    <th>Tên</th>
+                    <th>Giá trị</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><input type="text" onkeydown="handleKeyDown(event, 1)"></td>
+                    <td><input type="text" onkeydown="handleKeyDown(event, 2)"></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 15px;" >
+              <div class="form-group grid-col-4">
+                <label>Nổi bật</label>
+                <table class="featureTable" class="table">
+                  <thead>
+                  <tr>
+                    <th>Tên</th>
+                    <th>Giá trị</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+            </div>
+            <div class="flex-roww" style="justify-content: space-around; margin-top: 20px;" >
+              <div class="form-group grid-col-4">
+                <p>Ảnh thumbnail</p>
+                <input class="thumbnailInput" type="file" name="file" accept=".jpg, .jpeg, .png"  onchange="previewImage()" />
+                <div class="thumbnail-img-container grid-col-6" style="margin-top: 15px;">
+                  <img src="../assets/img/thumbnail/iphone-11-trang-600x600.jpg" alt="" class="thumbnailPreview" style="width:100%">
+                </div>
+              </div>
+              <div class="form-group grid-col-4">
+              </div>
+
+
+            </div>
+            <div class="flex-roww" style="margin-top: 20px;" >
+              <div class="form-group">
+                <p>Ảnh chi tiết</p>
+<!--                <input class="detailImageInput" type="file" name="file" accept=".jpg, .jpeg, .png" multiple  onchange="previewImages()"/>-->
+<!--                <div class="detailImagePreview" class="grid_row" style="margin-top: 15px;">-->
+<!--                </div>-->
+
+<!--                new -->
+                <input type="text" name="imgUrls">
+                <div class="upload__box">
+                  <div class="upload__btn-box">
+                    <label class="upload__btn">
+                      <p>Upload images</p>
+                      <input type="file" multiple data-max_length="20" name="imgs" class="upload__inputfile">
+                    </label>
+                  </div>
+                  <div class="upload__img-wrap"></div>
+                </div>
+
+                <script>
+                  uploadImg();
+
+                  function uploadImg() {
+                    let imgWrap = "";
+                    let imgArray = [];
+
+                    // Find all file input elements with the class 'upload__inputfile'
+                    document.querySelectorAll('.upload__inputfile').forEach(function (inputFile) {
+                      inputFile.addEventListener('change', function (e) {
+                        // Get the closest '.upload__box' and find '.upload__img-wrap' inside it
+                        imgWrap = inputFile.closest('.upload__box').querySelector('.upload__img-wrap');
+                        const maxLength = parseInt(inputFile.getAttribute('data-max_length'), 10);
+
+                        const files = e.target.files;
+                        const filesArr = Array.from(files);
+                        let iterator = 0;
+
+                        filesArr.forEach(function (f, index) {
+                          if (!f.type.match('image.*')) {
+                            return;
+                          }
+
+                          if (imgArray.length > maxLength) {
+                            return false;
+                          } else {
+                            let len = 0;
+                            for (let i = 0; i < imgArray.length; i++) {
+                              if (imgArray[i] !== undefined) {
+                                len++;
+                              }
+                            }
+                            if (len > maxLength) {
+                              return false;
+                            } else {
+                              imgArray.push(f);
+                              // document.querySelector("#")
+
+                              const reader = new FileReader();
+                              reader.onload = function (e) {
+                                const html = `
+                                <div class='upload__img-box'>
+                                    <div style='background-image: url(${e.target.result})'
+                                         data-number='${document.querySelectorAll(".upload__img-close").length}'
+                                         data-file='${f.name}' class='img-bg'>
+                                        <div class='upload__img-close'></div>
+                                    </div>
+                                </div>`;
+                                imgWrap.insertAdjacentHTML('beforeend', html);
+                                initializeImageRemoval();
+
+                                iterator++;
+                              };
+                              reader.readAsDataURL(f);
+                            }
+                          }
+                        });
+                      });
+                    });
+
+                    // Handle the image removal
+                    function initializeImageRemoval() {
+                      // Get all current upload__img-close elements
+                      const closeButtons = document.querySelectorAll('.upload__img-close');
+
+                      // Add click event listener to each button directly
+                      closeButtons.forEach(button => {
+                        button.addEventListener('click', function (e) {
+                          console.log("remove img");
+
+                          // Find the closest element with the class 'img-bg' to the clicked target
+                          const imgBox = e.target.closest('.img-bg');
+
+                          // Get the 'data-file' attribute from the 'img-bg' element
+                          const fileName = imgBox.getAttribute('data-file');
+
+                          // Remove the file from the 'imgArray'
+                          for (let i = 0; i < imgArray.length; i++) {
+                            if (imgArray[i].name === fileName) {
+                              imgArray.splice(i, 1);  // Remove the matching file from 'imgArray'
+                              break;
+                            }
+                          }
+
+                          // Remove the image box (the parent div) from the DOM
+                          imgBox.parentNode.remove();
+                        });
+                      });
+                    }
+
+// Call this function whenever a new image with a close button is added
+                  }
+
+                </script>
+
+<!--                end new-->
+              </div>
+            </div>
+            <p>Mô tả</p>
+            <div class="toolbar">
+              <button onclick="document.execCommand('bold')"><b>B</b></button>
+              <button onclick="document.execCommand('italic')"><i>I</i></button>
+              <button onclick="document.execCommand('underline')"><u>U</u></button>
+            </div>
+
+            <div contenteditable="true" class="editor" class="editor" placeholder="Bắt đầu soạn thảo văn bản ở đây..."></div>
+            <br>
+            <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+              <button class="btn  btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+              <button class="btn btn-primary btn-confirm" onclick="" type="button">Lưu</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function closeModal(event) {
+        event.currentTarget.closest(".modall").classList.remove("active");
+      }
+    </script>
+    <script>
+      // Hàm xử lý khi nhấn Enter hoặc Backspace
+      function handleKeyDown(event, column) {
+        const currentRow = event.target.closest('tr');
+        const currentInput = event.target;
+        const currentValue = currentInput.value;
+        const firstColumnInput = currentRow.cells[0].querySelector('input');
+        const secondColumnInput = currentRow.cells[1].querySelector('input');
+
+        // Kiểm tra khi nhấn Backspace
+        if (event.key === 'Backspace') {
+          // Nếu ô trống và ô đang được focus là ô đầu tiên
+          if (currentValue === '' && column === 1) {
+            event.preventDefault(); // Ngăn không cho xóa tiếp
+            const previousRow = currentRow.previousElementSibling;
+
+            if (previousRow) {
+              // Chuyển focus đến ô cuối cùng của cột 2 ở dòng trên nếu có
+              const previousCell = previousRow.cells[1].querySelector('input');
+              previousCell.focus();
+              currentRow.remove();
+            }
+            return;
+          }
+
+          // Nếu ô đang được focus là ô thứ hai và không còn ký tự
+          if (currentValue === '' && column === 2) {
+            // Nếu cột 1 vẫn còn dữ liệu thì focus về ô đầu tiên
+            if (firstColumnInput.value !== '') {
+              event.preventDefault();
+              firstColumnInput.focus();
+              return;
+            }
+            return;
+          }
+        }
+
+        // Kiểm tra khi nhấn Enter
+        if (event.key === 'Enter') {
+          event.preventDefault(); // Ngăn form gửi đi (nếu có form bao quanh)
+          const nextColumn = column === 1 ? 2 : 1;
+
+          if (nextColumn === 2) {
+            // Chuyển sang ô thứ 2 trong cùng hàng
+            currentRow.cells[1].querySelector('input').focus();
+          } else {
+            // Nếu đang ở ô thứ 2, thêm hàng mới và chuyển focus đến ô đầu tiên của hàng mới
+            addNewRow();
+            const newRow = document.getElementById('configTable').getElementsByTagName('tbody')[0].lastElementChild;
+            newRow.cells[0].querySelector('input').focus();
+          }
+        }
+      }
+
+      // Hàm thêm hàng mới vào bảng
+      function addNewRow() {
+        const table = document.getElementById('configTable').getElementsByTagName('tbody')[0];
+        const newRow = document.createElement('tr');
+
+        // Thêm 2 ô nhập liệu vào hàng mới
+        for (let i = 0; i < 2; i++) {
+          const newCell = document.createElement('td');
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.onkeydown = (event) => handleKeyDown(event, i + 1); // Gắn sự kiện Enter và Backspace cho từng ô
+          newCell.appendChild(input);
+          newRow.appendChild(newCell);
+        }
+
+        // Thêm hàng mới vào cuối bảng
+        table.appendChild(newRow);
+      }
+    </script>
+
+  </main><!-- End #main -->
+</div>
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/css/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/css/vendor/chart.js/chart.umd.js"></script>
+<script src="../assets/css/vendor/echarts/echarts.min.js"></script>
+<script src="../assets/css/vendor/quill/quill.min.js"></script>
+<script src="../assets/css/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="../assets/css/vendor/tinymce/tinymce.min.js"></script>
+<script src="../assets/css/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<!--<script src="../assets/js/main.js"></script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 100%;
+}
+
+#main {
+    margin-left: auto;
+}
+
+#header ul {
+    display: block;
+}
+
+.search-bar {
+    border: 1px solid var(--primary-color) ;
+    /*outline-offset: 3px;*/
+}
+
+.search-bar:focus-within {
+    outline-offset: unset;
+    outline: 3px solid var(--secondary-color); /* Tạo viền khi focus */
+}
+
+.search-bar input {
+    border: none !important;
+}
+
+.info-container {
+    margin-top: 40px;
+}
+
+.info-table td {
+    padding: 4px;
+}
+
+.info-input {
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid var(--primary-color);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.info-input:focus-visible {
+    outline-color: var(--secondary-color);
+}
+
+input[readonly]:focus,
+input[readonly]:focus-visible,
+input[readonly] {
+    border: none !important;
+    box-shadow: unset !important;
+    outline: unset !important;
+}
+
+
+input {
+    border-color: var(--primary-color) !important;
+}
+
+input:focus,
+input:focus-visible {
+    box-shadow: 0 0 0 .25rem var(--primary-hover-color) !important;
+    /*outline-color: var(--secondary-color) !important;*/
+}
+
+input[type="file"]:focus,
+input[type="file"]:focus-visible {
+    box-shadow: unset !important;
+    outline: unset !important;
+}
+
+textarea {
+    border-color: var(--primary-color) !important;
+}
+
+textarea:focus,
+textarea:focus-visible {
+    box-shadow: 0 0 0 .25rem var(--primary-hover-color) !important;
+    outline-color: var(--primary-color) !important;
+
+}
+
+
+.btn-fourth {
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-bold-color);
+    border: 1px solid var(--text-bold-color);
+}
+
+.btn-fourth:hover {
+    opacity: 0.3;
+    border: 1px solid var(--text-bold-color);
+    /*box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);*/
+}
+
+
+/* Tô màu nền cho các hàng chẵn và lẻ */
+tr:nth-child(even),
+tr:nth-child(even) input,
+tr:nth-child(even) select {
+    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+
+
+tr:nth-child(odd),
+tr:nth-child(odd) input,
+tr:nth-child(odd) select {
+    background-color: #ffffff; /* Màu nền cho hàng lẻ */
+}
+
+.not-confirm * {
+    background-color: rgb(255, 240, 219) !important;
+}
+
+.locked * {
+    background-color: rgb(255, 204, 204) !important;
+}
+
+.add-form {
+    display: none;
+}
+
+.add-form.active {
+    display: block;
+}
+
+#update-info-modal .modall-content {
+    overflow: auto;
+    /*max-width: 800px;*/
+    max-height: 90%;
+}
+
+
+/*header*/
+.dropdown-menu {
+    display: none !important;
+}
+
+.dropdown-menu.active {
+    display: block !important;
+}
+
+#sidebar {
+
+}
+
+#menu_overlay {
+
+}
+
+.attention {
+    color: red;
+}
+
+.note {
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.form-error {
+    color: red;
+    width: fit-content;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+    background-color: rgba(255, 0, 0, 0.22);
+}
+
+.active-option {
+    display: none !important;
+}
+
+.lock-option {
+    display: block !important;
+}
+
+.locked .active-option {
+    display: block !important;
+}
+
+.locked .lock-option {
+    display: none !important;
+}
+
+.input-search:focus,
+.input-search:focus-visible {
+    box-shadow: unset !important;
+}
+
+.menu-btn {
+    margin-right: 10px;
+}
+
+

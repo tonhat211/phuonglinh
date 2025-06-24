@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thietbididong.com</title>
+
+    <!-- thu vien jquery   -->
+    <script type="text/javascript" src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/js_bootstrap4/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/header.js"></script>
+    <script type="text/javascript" src="../assets/js/smartphone.js"></script>
+    <script type="text/javascript" src="../assets/js/toast.js"></script>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+
+    <!-- Favicons -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!--icon-->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts-bootstrap/bootstrap-icons.min.css">
+
+    <!-- Template Main CSS File -->
+    <link rel="stylesheet" href="../assets/css/css_bootstrap4/bootstrap.min.css">
+
+    <link href="../assets/css/base.css" rel="stylesheet">
+    <link href="../assets/css/header.css" rel="stylesheet">
+    <link href="../assets/css/footer.css" rel="stylesheet">
+    <link href="../assets/css/toast.css" rel="stylesheet">
+
+    <!-- css tu them   -->
+    <link href="../assets/css/smartphone.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="header pd10-20">
+    <div id="toast">
+
+    </div>
+    <script>
+        showSuccessToast("Thêm toast thành công");
+    </script>
+    <div class="header_top grid__row flex-roww">
+        <a href="" class="logo grid-col-2 pd0">
+            <img src="../assets/img/logo/Logo-The-Gioi-Di-Dong-MWG-B-H.webp" alt="" style="color:black;">
+        </a>
+        <form class="search-bar grid-col-4 ">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" name="" placeholder="Bạn tìm gì...">
+        </form>
+        <div class="user_part flex-roww grid-col-3">
+            <a class="cart flex-roww grid-col-6">
+                <i class="bi bi-cart3"></i>
+                <p>Giỏ hàng</p>
+            </a>
+            <div class="user flex-roww grid-col-6">
+                <i class="bi bi-person"></i>
+                <p><a href="login">Đăng nhập</a></p>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="cusOrderManagement.html" class="li-order">Đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="" class="li-address" onclick="manageAddress(event);">Sổ địa chỉ</a>
+                        </li>
+                        <li>
+                            <a href="" class="li-profile" onclick="manageProfile(event);">Quản lý</a>
+                        </li>
+                        <li>
+                            <a href="" class="li-logout">Đăng xuất</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom grid__row">
+        <ul class="main-menu flex-roww">
+            <li>
+                <a href=""><i class="bi bi-phone"></i>
+                    Điện thoại</a>
+            </li>
+            <li>
+                <a href=""><i class="bi bi-tablet-landscape"></i>
+                    Máy tính bảng</a>
+            </li>
+            <li>
+                <a href=""><i class="bi bi-laptop"></i>
+                    Laptop</a>
+            </li>
+        </ul>
+    </div>
+    <div id="modal-container">
+        <!--   cap nhat so dia chi -->
+    <div class="modall address-modal active" onclick="removeModal('#modal-container');">
+            <div class="modall-content" style="width: 80%; background-color: unset;">
+                <div class="flex-roww" style="align-items: start;justify-content: space-between;height: 100%;">
+                    <div class="sub-content" style="margin-right: 10px;height: 100%; padding-right: 5px;" onclick="event.stopPropagation();">
+                        <h3 style="text-align: center;padding-right: 10px;">Sổ địa chỉ</h3>
+                        <div class="update-container">
+                            <div id="address-container" style="padding-right: 10px;">
+                                <div class="address-item">
+                                    <div class="flex-roww" style="justify-content: space-between; align-items: start">
+                                        <div class="address-info">
+                                            <p><span class="receiver">nhat</span> |   <span class="phone">091250154</span></p>
+                                            <p class="id" hidden>0</p>
+                                            <p style="margin-top: 5px">Địa chỉ:</p>
+                                            <div>
+                                                <p class="address" style="margin-left: 10px;"><span class="street">14 đường số 2</span> - <span class="village">Bình Trưng Tây</span> - <span class="district">Thủ Đức</span> - <span class="province">Hồ Chí Minh</span></p>
+                                            </div>
+                                        </div>
+                                        <div class="flex-coll update-action">
+                                            <i class="bi bi-pencil-square btn-edit" onclick="initUpdateAddress(event,'.address-item','#editAddressForm')"></i>
+                                            <i class="bi bi-trash btn-delete" onclick="initDeleteAddress(event,'.address-item','.modall','.address-confirm')"></i>
+                                            <!--                                <i class="fa-solid fa-ellipsis editBtn" onclick="showEditAddress.call(this,event)"></i>-->
+                                        </div>
+                                    </div>
+                                    <div class="seperate-horizontal-90"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-content"  style="margin-left: 10px;" onclick="event.stopPropagation();">
+                        <form id="editAddressForm">
+                            <p class="bold-text-6 edit-title" style="text-align: center">Thêm địa chỉ</p>
+                            <div class="flex-roww" style="margin-top: 10px">
+                                <input type="text"  class="form-control w-80" id="receiver" name="receiver"  aria-describedby="" placeholder="Tên người nhận" value="">
+                                <div style="margin:0 10px"></div>
+                                <input type="text" class="form-control w-80" id="phone" name="phone"  aria-describedby="" placeholder="Số điện thoại nhận hàng" value="">
+                            </div>
+                            <p>Địa chỉ:</p>
+                            <div style="margin-left:10px">
+                                <input type="text" style="margin-top: 10px" class="form-control w-100" id="province" name="province"  aria-describedby="" placeholder="Thành phố/Tỉnh" value="">
+                                <input type="text" style="margin-top: 10px" class="form-control w-100" id="district" name="district"  aria-describedby="" placeholder="Quận/Huyện" value="">
+                                <input type="text" style="margin-top: 10px" class="form-control w-100" id="village" name="village"  aria-describedby="" placeholder="Phường/Xã" value="">
+                                <input type="text" style="margin-top: 10px" class="form-control w-100" id="street" name="street"  aria-describedby="" placeholder="Chi tiết" value="">
+                            </div>
+                            <input type="text" class="form-control w-80" id="id" name="id"  aria-describedby="" placeholder="ID account" value="" hidden>
+                            <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+                                <button class="btn btn-third" type="button" onclick="cancelEdit('#editAddressForm');">Hủy</button>
+                                <button class="btn btn-primary btn-edit" type="submit">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-confirm sub-content address-confirm active" onclick="event.stopPropagation();" >
+                <p class="bold-text-6 edit-title" style="text-align: center">Xác nhận xóa địa chỉ</p>
+                <div class="address-item">
+                    <div class="flex-roww" style="justify-content: space-between; align-items: start">
+                        <div class="address-info">
+                            <p>Người nhận: <span class="receiver">nhat</span></p>
+                            <p>Số điện thoại: <span class="phone">091250154</span></p>
+                            <p class="id" hidden>0</p>
+                            <p>Địa chỉ: <span class="address">nong lam</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+                    <button class="btn btn-third" type="button" onclick="cancelDelete(event,'.address-confirm');">Hủy</button>
+                    <button class="btn btn-primary btn-confirm-delete" onclick="deleteAddress(event)" type="button">Xóa</button>
+                </div>
+            </div>
+        <script>
+            function deleteAddress() {
+                let id =document.querySelector('.address-confirm .id');
+                deleteAddressAjax(id);
+            }
+
+        </script>
+        </div>
+    <div class="modall info-modal" onclick="removeModal('#modal-container');">
+            <div class="modall-content" style="width: 80%; background-color: unset;">
+                <div class="flex-roww" style="align-items: start;justify-content: center;height: 100%;">
+                    <div class="sub-content"  style="margin-right: 10px; width: 50%;" onclick="event.stopPropagation();">
+                        <form id="editInfoForm">
+                            <h3 style="text-align: center;padding-right: 10px;">Thông tin cá nhân</h3>
+                            <div class="flex-roww update-action" style="justify-content: right;">
+                                <i class="bi bi-pencil-square btn-edit" onclick="initUpdateInfo(event,'#editInfoForm');"></i>
+                            </div>
+                            <p class="bold-text-6 edit-title" style="text-align: center;color: var(--bold-color);display: none;">Cập nhật thông tin</p>
+
+                            <div class="form-group">
+                                <label>Họ tên</label>
+                                <input type="text" class="form-control" name="name" placeholder="Nhập họ và tên" value="To nhat" required readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Nhập email" value="tonhat@gmail.com" required readonly>
+                            </div>
+                            <p>Giới tính:</p>
+                            <div class="flex-roww" style="justify-content: space-around;margin-bottom: 10px;">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" checked readonly>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Nam
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="female" readonly>
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Nữ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="exampleRadios3" value="notToSay" readonly>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        Không muốn tiết lộ
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ngày sinh</label>
+                                <input type="date" class="form-control" name="birthday" placeholder="Nhập ngày sinh" value="2003-01-01" required readonly>
+                            </div>
+                            <a href="" onclick="initChangePwd(event,'#edit-pwd-form')">Đổi mật khẩu</a>
+                            <div class="flex-roww btn-edit-container" style="margin-top:20px; justify-content: space-around; display: none;">
+                                <button class="btn btn-third" type="button" onclick="cancelEditInfo(event,'#editInfoForm');">Hủy</button>
+                                <button class="btn btn-primary btn-edit" type="submit">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sub-content" id="edit-pwd-form"  style="margin-left: 10px;width: 50%;" onclick="event.stopPropagation();">
+                        <form id="editPassword">
+                            <p class="bold-text-6 edit-title" style="text-align: center;color:var(--bold-color);">Đổi mật khẩu</p>
+                            <div class="form-group">
+                                <label>Mật khẩu hiện tại</label>
+                                <input type="password" class="form-control" name="name" placeholder="Nhập mật khẩu hiện tại" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mật khẩu mới</label>
+                                <input type="password" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Nhập mật khẩu hiện mới" required>
+                                <span class="pwd-error active">* Mật khẩu phải trên 8 ký tự</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Nhập lại mật khẩu mới</label>
+                                <input type="password" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Nhập lại mật khẩu hiện mới" required>
+                            </div>
+                            <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+                                <button class="btn btn-third" type="button" onclick="cancelChangePwd('#edit-pwd-form');">Hủy</button>
+                                <button class="btn btn-primary btn-edit" type="submit">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<div class="content-container">
+    <div class="advertisement">
+        <img src="../assets/img/advertisement/ad-iphone16.jpg" alt=""></img>
+    </div>
+
+    <div class="sub-content online-promotion">
+        <p class="bold-text-7" style="font-size: 25px">Khuyến mãi online</p>
+        <div class="flex-roww" style="justify-content: center">
+            <p class="promotion-time flex-roww" id="promotion-remaining-time">Chỉ còn
+                <span class="time-component promotion-time_hour hour">06</span> :
+                <span class="time-component promotion-time_minute minute">24</span> :
+                <span class="time-component promotion-time_second second">30</span>
+            </p>
+        </div>
+        <script>
+            countdown("#promotion-remaining-time",6,24,30);
+        </script>
+        <div class="promotion-product-list">
+            <div class="grid__row">
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="border-radius: 10px; overflow: hidden;margin-top: 20px;">
+        <ol class="carousel-indicators" style="bottom:-30px;">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner1.png" alt="First slide">
+                    </div>
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner2.png" alt="Second slide">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner3.jpg" alt="First slide">
+                    </div>
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner4.png" alt="Second slide">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner5.jpg" alt="First slide">
+                    </div>
+                    <div class="col-6">
+                        <img class="d-block w-100" src="../assets/img/banner/banner6.png" alt="Second slide">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="justify-content: start">
+            <!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+            <i class="bi bi-arrow-left-circle-fill" style="font-size: 40px; margin: 20px;"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="justify-content: end">
+            <!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+            <i class="bi bi-arrow-right-circle-fill" style="font-size: 40px; margin: 20px;"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="sub-content cue-product">
+        <p class="bold-text-7" style="font-size: 25px">Gợi ý cho bạn</p>
+        <div class="promotion-product-list">
+            <div class="grid__row">
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col-2_4 product-item-container">
+                    <div class="product-item">
+                        <div class="info flex-roww status">
+                            <p class="status-item">Mẫu mới</p>
+                        </div>
+                        <div class="img-container flex-roww">
+                            <img class="img-product" src="../assets/img/product/samsung-galaxy-s23-fe-mint-thumbnew-600x600.jpg" alt="">
+                        </div>
+                        <div class="info promotion">
+                            <p class="promotion-item"><i class="bi bi-gift"></i> Đổi 4G tặng 480k</p>
+                        </div>
+                        <div class="info features flex-roww">
+                            <p class="feature-item">Man hinh 4k</p>
+                            <p class="feature-item">sac 5p day</p>
+                        </div>
+                        <div class="version flex-roww group">
+                            <div class="version-item active">
+                                <p>64gb</p>
+                            </div>
+                            <div class="version-item">
+                                <p>128gb</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div><p class="cur-price">6.000.000 <span>VND</span></p> </div>
+                            <div><p class="init-price">10.000.000 <span>VND</span></p> </div>
+                        </div>
+                        <div class="info rate">
+                            <p><i class="bi bi-star-fill"></i><span class="rate-figure">4.9</span>(<span class="total-estimate">16</span>)</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer pd10-20">
+    <div class="grid__row w100">
+        <div class="grid-col-3">
+            <p class="footer__title">Tổng đài hỗ trợ</p>
+            <div class="footer__content">
+                <p>Gọi mua: <span class="footer__detail">1900 1900</span> (8:00 - 21:30)</p>
+                <p>Khiếu nại: <span class="footer__detail">1900 1900</span> (8:00 - 21:30)</p>
+                <p>Bảo hành: <span class="footer__detail">1900 1900</span> (8:00 - 21:30)</p>
+            </div>
+        </div>
+        <div class="grid-col-3">
+            <p class="footer__title">Về công ty</p>
+            <div class="footer__content">
+                <a href="">Giới thiệu công ty</a>
+                <a href="">Tìm siêu thị: <span class="footer__detail">100</span> Shop</a>
+                <a href="">Tuyển dụng</a>
+            </div>
+        </div>
+        <div class="grid-col-3">
+            <p class="footer__title">Menu</p>
+            <div class="footer__content">
+                <a href=""><i class="bi bi-phone"></i>
+                    Điện thoại</a>
+                <a href=""><i class="bi bi-tablet-landscape"></i>
+                    Máy tính bảng</a>
+                <a href=""><i class="bi bi-laptop"></i>
+                    Laptop</a>
+            </div>
+        </div>
+        <div class="grid-col-3">
+            <p class="footer__title">Thông tin khác</p>
+            <div class="footer__content">
+                <a href=""><i class="bi bi-facebook"></i>
+                    <span class="footer__detail">1.000.000</span> Theo dõi</a>
+                <a href=""><i class="bi bi-youtube"></i>
+                    <span class="footer__detail">2.000.000</span> Đăng ký</a>
+                <a href=""><img src="../assets/img/logo/logo-da-thong-bao-bo-cong-thuong.webp" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="grid__row footer__content">
+        <p>© 2018. Công ty cổ phần Thiết Bị Di Động. GPDKKD: 0303217354 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. GPMXH: 238/GP-BTTTT do Bộ Thông Tin và Truyền Thông cấp ngày 04/06/2020.<br>
+            Địa chỉ: 128 Trần Quang Khải, P.Tân Định, Q.1, TP.Hồ Chí Minh. Địa chỉ liên hệ và gửi chứng từ: Lô T2-1.2, Đường D1, Đ. D1, P.Tân Phú, TP.Thủ Đức, TP.Hồ Chí Minh. Điện thoại: 028 38125960.<br>
+            Email: cskh@thietbididong.com. Chịu trách nhiệm nội dung: Huỳnh Văn Tốt. Email: hotrotmdt@thietbididong.com. Xem chính sách sử dụng</p>
+    </div>
+
+
+</div>
+</body>
+</html>

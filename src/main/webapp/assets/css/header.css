@@ -1,0 +1,374 @@
+.header {
+    width: 100%;
+    /*height: 95px;*/
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.header_top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.header_top .logo img{
+    width: 100%;
+}
+
+.search-bar {
+    margin-left: 10px;
+}
+
+.user_part {
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.user,
+.cart {
+    text-decoration: none;
+    color: black;
+    width: fit-content;
+    padding: 7px;
+
+}
+
+.user:hover,
+.cart:hover {
+    cursor: pointer;
+    background-color: var(--primary-hover-color);
+    border-radius: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.user p,
+.cart p {
+    margin-left: 5px;
+}
+
+.user p a {
+    text-decoration: none;
+    color: black;
+}
+
+.user p a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.header_bottom {
+    margin-top: 64px;
+    width: 100%;
+
+}
+
+.main-menu {
+    list-style-type: none;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.main-menu li {
+
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main-menu li a:hover {
+    background-color: var(--primary-hover-color);
+
+}
+
+.main-menu li a.active {
+    background-color: var(--primary-hover-color);
+}
+
+.main-menu li a i {
+    margin-right: 5px;
+}
+
+.user {
+    position: relative;
+}
+
+
+
+.sub-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    list-style: none;
+    width: 120px;
+    background-color:  var(--primary-hover-color);
+    border-radius: 10px;
+    box-shadow:  0 0 6px 6px rgb(179 179 179 / 30%);
+    display: none;
+}
+
+.sub-menu::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 120px;
+    height: 22px;
+}
+
+.user:hover .sub-menu { display: block; }
+
+.sub-menu li {
+    padding: 4px 10px;
+}
+
+.sub-menu li a {
+    color: var(--text-color-2)
+}
+
+.sub-menu li:hover {
+    background-color:  var(--primary-color);
+}
+
+.sub-menu li:hover a {
+    color: var(--secondary-color) !important;
+
+}
+
+.sub-menu li:first-child {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.sub-menu li:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sub-menu li a:hover {
+    list-style-type: unset;
+}
+
+/* update info */
+#modal-container .sub-content {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--content-bg-color);
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+#modal-container .modall {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(182, 182, 182, 0.91);
+    z-index: 3;
+    display: none;
+    animation: modalFadeIn ease 0.49s;
+    height: 100vh;
+}
+
+#modal-container .overlay {
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(204, 204, 204, 0.6);
+    z-index: 1;
+    display: none;
+    animation: modalFadeIn ease 0.49s;
+
+}
+
+#modal-container .modall-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 10px;
+    height: 65%;
+    /*box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);*/
+}
+
+#modal-container .modall.active,
+#modal-container .overlay.active {
+    display: block;
+
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#modal-container .update-container {
+    height: 85%;
+}
+
+#modal-container .address-item {
+    margin-top: 15px;
+}
+
+#modal-container .update-action i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 7px;
+    margin: 5px 0;
+}
+
+#modal-container .btn-edit {
+    color: var(--text-color-2);
+    background-color: var(--primary-bg-color);
+}
+
+#modal-container .btn-delete {
+    color: white;
+    background-color: red;
+}
+
+#modal-container {
+    height: 100%;
+}
+
+#modal-container .update-action i:hover {
+    opacity: 0.3;
+    cursor: pointer;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+.address-item:hover {
+    background-color: var(--transparent-yellow-color);
+    cursor: pointer;
+}
+
+.address-item.active {
+    background-color: var(--transparent-yellow-color);
+}
+
+#address-container {
+    height: 100%;
+    overflow: auto;
+}
+
+#address-container::-webkit-scrollbar {
+    width: 2px;
+}
+
+#address-container::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+#address-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+#address-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#modal-container .modal-confirm {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: var(--hover-color);
+    display: none;
+}
+
+#modal-container .modal-confirm.active {
+    display: block;
+}
+
+.btn-confirm-delete {
+    color: white;
+    background-color: red;
+}
+
+.btn-confirm-delete:hover,
+.btn-third:hover,
+.btn-edit:hover {
+    opacity: 0.3;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+/* info management */
+.info-item {
+    width: 100%;
+}
+
+.info-item p {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.info-item span {
+    font-size: 17px;
+}
+
+#editInfoForm input {
+    margin-bottom: 10px;
+
+}
+
+/* pwd form */
+
+/*.current-pwd-error,*/
+.form-error {
+    color: red;
+    width: fit-content;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+    background-color: rgba(255, 0, 0, 0.22);
+}
+
+#edit-pwd-form-container {
+    display: none;
+}
+
+#edit-pwd-form-container.active {
+    display: block;
+}
+
+.modal-login-require.active {
+    display: block;
+}
+
+.menu-btn_mob {
+    display: none;
+}
+
+.btn-add-address_mob {
+    display: none;
+}
+
+
+
+
+

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Quản lý đơn hàng</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <script type="text/javascript" src="../assets/js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/js_bootstrap4/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../assets/js/toast.js"></script>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/fonts/fonts-bootstrap/bootstrap-icons.min.css">
+  <link href="../assets/css/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/css/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/css/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/modal.css" rel="stylesheet">
+  <link href="../assets/css/toast.css" rel="stylesheet">
+
+
+
+  <link href="../assets/css/adminBase.css" rel="stylesheet">
+  <link href="../assets/css/adminOrder.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top flex-roww" style="justify-content: space-between">
+  <a href="" class="logo grid-col-2 pd0">
+      <img src="../assets/img/logo/Logo-The-Gioi-Di-Dong-MWG-B-H.webp" alt="" style="color:black;">
+  </a>
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="display: none">
+          <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+              <i class="bi bi-person"></i>
+              <span>Quản lý tài khoản</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Đăng xuất</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header>
+<!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<div class="flex-roww">
+  <aside id="sidebar" class="sidebar grid-col-2">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <h3 style="text-align: center">[Admin]</h3>
+      <li class="nav-item ">
+        <a class="nav-link " href="admin_dashboard.html">
+          <!--                <i class="bi bi-grid"></i>-->
+          <span>Thống kê doanh thu</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="adminCustomer.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý khách hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminEmployee.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý nhân viên</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminProduct.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminOrder.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý đơn hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminNews.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý tin tức</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminHomes.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminAboutUs.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Nhà phân phối</span>
+        </a>
+      </li>
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main grid-col-10">
+    <div id="toast-2">
+
+    </div>
+    <script>
+      showSuccessToast2("test");
+    </script>
+    <div class="pagetitle grid-col-3">
+      <h1>Quản lý đơn hàng</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý đơn hàng</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <div class="sub-content">
+      <div class="flex-roww" style="justify-content: space-between">
+        <form class="search-bar grid-col-4 ">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="" placeholder="Bạn tìm gì...">
+        </form>
+        <div class="flex-roww">
+          <p style="margin-right: 10px">Xem theo trạng thái: </p>
+          <select name="status" onchange="handleChange(event);" data-default="all">
+            <option value="all">Tất cả</option>
+            <option value="waiting">Chờ xác nhận</option>
+            <option value="confirm">Xác nhận</option>
+            <option class="" value="delivery">Vận chuyển</option>
+            <option class="" value="complete">Thành công</option>
+            <option value="cancel">Hủy</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="info-container custom-scroll" style="max-height: 90%;">
+        <table style="width: 100%;" id="infoTable" class="info-table">
+          <thead>
+          <tr>
+            <th scope="col" class="grid-col-0_5 text-center" style="height: fit-content;">ID</th>
+            <th scope="col" class="grid-col-1_5">Tạo lúc</th>
+            <th scope="col" class="grid-col-3_5">Danh sách sản phẩm</th>
+            <th scope="col" class="grid-col-1_5">Tổng tiền</th>
+            <th scope="col" class="grid-col-1_5">Địa chỉ</th>
+            <th scope="col" class="grid-col-1_5">Cập nhật vào</th>
+            <th scope="col" class="grid-col-1">Trạng thái</th>
+            <th scope="col" class="grid-col-1">Thao tác</th>
+          </tr>
+          </thead>
+          <tbody class="group">
+            <tr>
+              <th scope="rol" class="grid-col-0_5 text-center id" style="height: fit-content;">1</th>
+              <td class="grid-col-1_5">
+                14/11/2024 </br> 12:12:12
+              </td>
+              <td class="grid-col-3_5">
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB)
+
+              </td>
+              <td class="grid-col-1_5">200.000.000</td>
+              <td class="grid-col-1_5"><a class="address-detail-btn" href="" onclick="event.preventDefault()">Chi tiết</a>
+                <div style="position: relative;">
+                  <div class="address-container sub-content">
+                    <p>To Nhat</p>
+                    <p>Sdt: 03523405724</p>
+                    <p>Nga 3 bao dinh xuan dinh xuan loc dong nai</p>
+                  </div>
+                </div>
+              </td>
+              <td class="grid-col-1_5">14/11/2024 </br> 12:12:12</td>
+              <td class="grid-col-1">Vận chuyển</td>
+              <td class="grid-col-1">
+                <select name="action" onchange="handleChange(event);" data-default="none">
+                  <option value="none">...</option>
+                  <option value="confirm">Xác nhận</option>
+                  <option class="" value="delivery">Bàn giao</option>
+                  <option class="" value="complete">Thành công</option>
+                  <option value="cancel">Hủy</option>
+                </select>
+              </td>
+            </tr>
+
+
+
+          <script>
+
+            function showAddress(event) {
+              event.preventDefault();
+              event.currentTarget.parentNode.querySelector(".address-container").classList.add("active");
+              console.log();
+            }
+            // xử lý khi action được chọn
+            function handleChange(event) {
+              event.stopPropagation();
+              let selectedValue = event.target.value;
+              setDefaultOption("action");
+              event.target.value = selectedValue;
+              console.log("selected value: " + selectedValue);
+              const group = event.currentTarget.closest(".group");
+              selectedValue=selectedValue.toUpperCase();
+              switch (selectedValue) {
+                case "CONFIRM": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "DELIVERY": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "COMPLETE": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "CANCEL": {
+                  // xu ly cap nhat
+                  var id = group.querySelector(".id").innerText;
+                  var object = "Đơn hàng: " + id;
+                  setupConfirm("#cancel-confirm-modal",object);
+                  break;
+                }
+                default:
+                  setInfosStatus(group,false);
+              }
+            }
+
+
+
+            // mở modal xác nhận
+            function setupConfirm(modalID,object) {
+              // var name = group.querySelector('input[name="name"]').value;
+              openModal(modalID);
+              document.querySelector(modalID).querySelector('.object').innerText = object;
+            }
+
+            function openModal(modalID) {
+              document.querySelector(modalID).classList.add('active');
+            }
+
+
+
+            function setDefaultOption(name) {
+              document.querySelectorAll(`select[name="${name}"]`).forEach(select => {
+                const defaultValue = select.getAttribute('data-default');
+                  select.value = defaultValue;
+              });
+            }
+            setDefaultOption("action");
+
+
+          </script>
+          </tbody>
+          <tbody class="group">
+            <tr>
+              <th scope="rol" class="grid-col-0_5 text-center id" style="height: fit-content;">1</th>
+              <td class="grid-col-1_5">
+                14/11/2024 </br> 12:12:12
+              </td>
+              <td class="grid-col-3_5">
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB) </br>
+                6 x ID:1 - Iphone 11 thuong (den-4-64GB)
+
+              </td>
+              <td class="grid-col-1_5">200.000.000</td>
+              <td class="grid-col-1_5"><a class="address-detail-btn" href="" onclick="event.preventDefault()">Chi tiết</a>
+                <div style="position: relative;">
+                  <div class="address-container sub-content">
+                    <p>To Nhat</p>
+                    <p>Sdt: 03523405724</p>
+                    <p>Nga 3 bao dinh xuan dinh xuan loc dong nai</p>
+                  </div>
+                </div>
+              </td>
+              <td class="grid-col-1_5">14/11/2024 </br> 12:12:12</td>
+              <td class="grid-col-1">Vận chuyển</td>
+              <td class="grid-col-1">
+                <select name="action" onchange="handleChange(event);" data-default="2">
+                  <option value="0">...</option>
+                  <option value="1">Xác nhận</option>
+                  <option class="" value="2">Bàn giao</option>
+                  <option class="" value="3">Thành công</option>
+                  <option value="4">Hủy</option>
+                </select>
+              </td>
+            </tr>
+
+
+
+          <script>
+
+            function showAddress(event) {
+              event.preventDefault();
+              event.currentTarget.parentNode.querySelector(".address-container").classList.add("active");
+              console.log();
+            }
+            // xử lý khi action được chọn
+            function handleChange(event) {
+              event.stopPropagation();
+              let selectedValue = event.target.value;
+              setDefaultOption("action");
+              event.target.value = selectedValue;
+              console.log("selected value: " + selectedValue);
+              const group = event.currentTarget.closest(".group");
+              selectedValue=selectedValue.toUpperCase();
+              switch (selectedValue) {
+                case "CONFIRM": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "DELIVERY": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "COMPLETE": {
+                  // xu ly cap nhat
+                  break;
+                }
+                case "CANCEL": {
+                  // xu ly cap nhat
+                  var id = group.querySelector(".id").innerText;
+                  var object = "Đơn hàng: " + id;
+                  setupConfirm("#cancel-confirm-modal",object);
+                  break;
+                }
+                default:
+                  // setInfosStatus(group,false);
+              }
+            }
+
+
+
+            // mở modal xác nhận
+            function setupConfirm(modalID,object) {
+              // var name = group.querySelector('input[name="name"]').value;
+              openModal(modalID);
+              document.querySelector(modalID).querySelector('.object').innerText = object;
+            }
+
+            function openModal(modalID) {
+              document.querySelector(modalID).classList.add('active');
+            }
+
+
+
+            function setDefaultOption(name) {
+              document.querySelectorAll(`select[name="${name}"]`).forEach(select => {
+                const defaultValue = select.getAttribute('data-default');
+                  select.value = defaultValue;
+              });
+            }
+            // setDefaultOption("action");
+
+            function setDisabledOption(name,exception) {
+              document.querySelectorAll(`select[name="${name}"]`).forEach(select => {
+                const defaultValue = parseInt(select.getAttribute('data-default'));
+                console.log(defaultValue);
+                select.querySelectorAll('option').forEach(option => {
+                  var value = parseInt(option.value);
+                  if(value>=0 && value <= defaultValue) {
+                    console.log("nhor");
+                    option.disabled = true;
+                  }
+                  if(exception.includes(defaultValue)) {
+                    if(exception.includes(value)) {
+                      option.disabled = true;
+                    }
+                  }
+                });
+              });
+            }
+
+            setDisabledOption("action",[3,4]);
+
+
+          </script>
+          </tbody>
+        </table>
+        <div class="temp" style="display: none;">
+
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="flex-roww" style="justify-content: center;margin-top: 20px">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span class="sr-only">Trước</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link active" data-value="1" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" data-value="2" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" data-value="3" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+<!--              <span aria-hidden="true">&raquo;</span>-->
+              <span class="sr-only">Tiếp theo</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="modall" id="cancel-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận hủy </br> <span class="object"></span></p>
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      function closeModal(event) {
+        event.currentTarget.closest(".modall").classList.remove("active");
+      }
+    </script>
+    <script>
+      // Hàm xử lý khi nhấn Enter hoặc Backspace
+      function handleKeyDown(event, column) {
+        const currentRow = event.target.closest('tr');
+        const currentInput = event.target;
+        const currentValue = currentInput.value;
+        const firstColumnInput = currentRow.cells[0].querySelector('input');
+        const secondColumnInput = currentRow.cells[1].querySelector('input');
+
+        // Kiểm tra khi nhấn Backspace
+        if (event.key === 'Backspace') {
+          // Nếu ô trống và ô đang được focus là ô đầu tiên
+          if (currentValue === '' && column === 1) {
+            event.preventDefault(); // Ngăn không cho xóa tiếp
+            const previousRow = currentRow.previousElementSibling;
+
+            if (previousRow) {
+              // Chuyển focus đến ô cuối cùng của cột 2 ở dòng trên nếu có
+              const previousCell = previousRow.cells[1].querySelector('input');
+              previousCell.focus();
+              currentRow.remove();
+            }
+            return;
+          }
+
+          // Nếu ô đang được focus là ô thứ hai và không còn ký tự
+          if (currentValue === '' && column === 2) {
+            // Nếu cột 1 vẫn còn dữ liệu thì focus về ô đầu tiên
+            if (firstColumnInput.value !== '') {
+              event.preventDefault();
+              firstColumnInput.focus();
+              return;
+            }
+            return;
+          }
+        }
+
+        // Kiểm tra khi nhấn Enter
+        if (event.key === 'Enter') {
+          event.preventDefault(); // Ngăn form gửi đi (nếu có form bao quanh)
+          const nextColumn = column === 1 ? 2 : 1;
+
+          if (nextColumn === 2) {
+            // Chuyển sang ô thứ 2 trong cùng hàng
+            currentRow.cells[1].querySelector('input').focus();
+          } else {
+            // Nếu đang ở ô thứ 2, thêm hàng mới và chuyển focus đến ô đầu tiên của hàng mới
+            addNewRow();
+            const newRow = document.getElementById('configTable').getElementsByTagName('tbody')[0].lastElementChild;
+            newRow.cells[0].querySelector('input').focus();
+          }
+        }
+      }
+
+      // Hàm thêm hàng mới vào bảng
+      function addNewRow() {
+        const table = document.getElementById('configTable').getElementsByTagName('tbody')[0];
+        const newRow = document.createElement('tr');
+
+        // Thêm 2 ô nhập liệu vào hàng mới
+        for (let i = 0; i < 2; i++) {
+          const newCell = document.createElement('td');
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.onkeydown = (event) => handleKeyDown(event, i + 1); // Gắn sự kiện Enter và Backspace cho từng ô
+          newCell.appendChild(input);
+          newRow.appendChild(newCell);
+        }
+
+        // Thêm hàng mới vào cuối bảng
+        table.appendChild(newRow);
+      }
+    </script>
+
+  </main><!-- End #main -->
+</div>
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/css/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/css/vendor/chart.js/chart.umd.js"></script>
+<script src="../assets/css/vendor/echarts/echarts.min.js"></script>
+<script src="../assets/css/vendor/quill/quill.min.js"></script>
+<script src="../assets/css/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="../assets/css/vendor/tinymce/tinymce.min.js"></script>
+<script src="../assets/css/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<!--<script src="../assets/js/main.js"></script>-->
+
+</body>
+
+</html>

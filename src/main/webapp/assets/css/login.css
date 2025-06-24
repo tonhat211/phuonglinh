@@ -1,0 +1,99 @@
+.content-container {
+    background-color: var(--base-bg-color);
+    padding: 20px 20px;
+    align-items: unset;
+}
+
+.sub-content {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--content-bg-color);
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+.form-container {
+    margin-top: 0 !important;
+    width: 60% !important;
+    padding: 20px !important;
+}
+
+/*.repwd-error,*/
+/*.email-error,*/
+/*.pwd-error {*/
+/*    color: red;*/
+/*    !*padding: 0 4px;*!*/
+/*    width: fit-content;*/
+/*    border-radius: 4px;*/
+/*    margin: 4px 0;*/
+/*    font-size: 14px;*/
+/*    background-color: rgba(255, 0, 0, 0.22);*/
+/*    display: none;*/
+/*}*/
+
+.form-error {
+    color: red;
+    width: fit-content;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-size: 14px;
+    background-color: rgba(255, 0, 0, 0.22);
+}
+
+/*.repwd-error.active,*/
+/*.email-error.active,*/
+/*.pwd-error.active {*/
+/*    display: block;*/
+/*}*/
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    margin-bottom: 0;
+}
+
+.form-group input:focus {
+    box-shadow:  1px 0 5px 3px #ffc1073b;
+    border-color: #fc7600;
+}
+
+.btn-login {
+    background-color: #fc7600;
+    color: white;
+}
+
+.btn-buy:hover {
+    box-shadow:  0 0 4px 2px rgb(179 179 179 / 30%);
+}
+
+.btnShowPwd:focus-visible,
+.btnShowPwd {
+    background-color: #ffc1073b;
+    text-align: center;
+    border: none;
+}
+
+.btnShowPwd:hover {
+    background-color: #fc7600;
+    cursor: pointer;
+    border: none;
+}
+
+.btnShowPwd i {
+    display: block;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+}
+
+
+.btrr0{
+    border-top-right-radius: 0
+}
+
+.bbrr0{
+    border-bottom-right-radius: 0
+}

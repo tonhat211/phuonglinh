@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Thống kê doanh thu</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/fonts/fonts-bootstrap/bootstrap-icons.min.css">
+  <link href="../assets/css/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../assets/css/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../assets/css/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/css/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/modal.css" rel="stylesheet">
+
+
+
+  <link href="../assets/css/adminBase.css" rel="stylesheet">
+  <link href="../assets/css/adminCustomer.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top flex-roww" style="justify-content: space-between">
+  <a href="" class="logo grid-col-2 pd0">
+      <img src="../assets/img/logo/Logo-The-Gioi-Di-Dong-MWG-B-H.webp" alt="" style="color:black;">
+  </a>
+  <nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+
+      <li class="nav-item d-block d-lg-none">
+        <a class="nav-link nav-icon search-bar-toggle " href="#">
+          <i class="bi bi-search"></i>
+        </a>
+      </li><!-- End Search Icon-->
+
+      <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+        </a><!-- End Profile Iamge Icon -->
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="display: none">
+          <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="profile.html">
+              <i class="bi bi-person"></i>
+              <span>Quản lý tài khoản</span>
+            </a>
+          </li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item d-flex align-items-center" href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>Đăng xuất</span>
+            </a>
+          </li>
+
+        </ul><!-- End Profile Dropdown Items -->
+      </li><!-- End Profile Nav -->
+
+    </ul>
+  </nav><!-- End Icons Navigation -->
+
+</header>
+<!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<div class="flex-roww">
+  <aside id="sidebar" class="sidebar grid-col-2">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <h3 style="text-align: center">[Admin]</h3>
+      <li class="nav-item ">
+        <a class="nav-link " href="admin_dashboard.html">
+          <!--                <i class="bi bi-grid"></i>-->
+          <span>Thống kê doanh thu</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item ">
+        <a class="nav-link collapsed" href="adminCustomer.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý khách hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminEmployee.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý nhân viên</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminProduct.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminOrder.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý đơn hàng</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminNews.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý tin tức</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminHomes.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Quản lý trang chủ</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="adminAboutUs.html">
+          <!--        <i class="bi bi-person"></i>-->
+          <span>Nhà phân phối</span>
+        </a>
+      </li>
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main grid-col-10">
+
+    <div class="pagetitle grid-col-3">
+      <h1>Quản lý khách hàng</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+          <li class="breadcrumb-item active">Quản lý khách hàng</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <div class="sub-content">
+      <div class="flex-roww" style="justify-content: space-between">
+        <form class="search-bar grid-col-4 ">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="" placeholder="Bạn tìm gì...">
+        </form>
+        <a href="" onclick="setupAddCustomer(event);">Thêm khách hàng</a>
+      </div>
+      <div class="info-container">
+        <form id="addCustomerForm" class="add-form" action="adminCustomer" method="post" style="margin: 40px 0">
+          <table style="width: 100%;"  class="info-table">
+            <thead>
+            <tr>
+              <th scope="col" class="grid-col-2_4">Họ tên</th>
+              <th scope="col" class="grid-col-2_4">Email</th>
+              <th scope="col" class="grid-col-2_4">Số điện thoại</th>
+              <th scope="col" class="grid-col-1">Giới tính</th>
+              <th scope="col" class="grid-col-1">Ngày sinh</th>
+              <th scope="col" class="grid-col-1" style="height: fit-content;">Thao tác</th>
+            </tr>
+            </thead>
+            <tbody class="group">
+            <tr class="group">
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="name" value="Xuan Nhi">
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="email" value="xuannhi@gmail.com">
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="phone" value="015215524386">
+              </td>
+              <td class="grid-col-1">
+                <select name="gender" data-default="male">
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                  <option value="notToSay">Không</option>
+                </select>
+              </td>
+              <td class="grid-col-1">
+                <input class="info-input" type="date" name="birthday" value="2003-10-10" readonly>
+              </td>
+              <td class="grid-col-1">
+                <button class="btn btn-primary btn-confirm" onclick="openModal('#message-modal');" type="button">Thêm</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </form>
+
+        <table style="width: 100%;" id="infoTable" class="info-table">
+          <thead>
+          <tr>
+            <th scope="col" class="grid-col-0_5" style="height: fit-content;">STT</th>
+            <th scope="col" class="grid-col-0_5">ID</th>
+            <th scope="col" class="grid-col-2_4">Họ tên</th>
+            <th scope="col" class="grid-col-2_4">Email</th>
+            <th scope="col" class="grid-col-2_4">Số điện thoại</th>
+            <th scope="col" class="grid-col-1">Giới tính</th>
+            <th scope="col" class="grid-col-1">Ngày sinh</th>
+            <th scope="col" class="grid-col-1" style="height: fit-content;">Thao tác</th>
+          </tr>
+          </thead>
+          <tbody class="group">
+            <tr class="group">
+              <th scope="row" class="grid-col-0_5" >
+                <span class="stt">1</span>
+              </th>
+              <td class="">
+                <span class="stt grid-col-0_5">1</span>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="name" value="Xuan Nhi" readonly>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="email" value="xuannhi@gmail.com" readonly>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="phone" value="017350135" readonly>
+              </td>
+              <td class="grid-col-1">
+                <select name="gender" disabled data-default="female">
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                  <option value="notToSay">Không</option>
+                </select>
+              </td>
+              <td class="grid-col-1">
+                <input class="info-input" type="date" name="birthday" value="2003-10-10" readonly>
+              </td>
+              <td class="grid-col-1">
+                <select name="action" onchange="handleChange(event);" data-default="none">
+                  <option value="none">...</option>
+                  <option value="update">Cập nhật</option>
+                  <option value="lock">Khóa</option>
+                  <option value="unlock">Mở khóa</option>
+                  <option value="order">Đơn hàng</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="group">
+              <th scope="row" class="grid-col-0_5" >
+                <span class="stt">1</span>
+              </th>
+              <td class="">
+                <span class="stt grid-col-0_5">1</span>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="name" value="Tô Minh Nhật" readonly>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="email" value="tominhat@gmail.com" readonly>
+              </td>
+              <td class="grid-col-2_4">
+                <input class="info-input" type="text" name="phone" value="01935135342" readonly>
+              </td>
+              <td class="grid-col-1">
+                <select name="gender" disabled data-default="male">
+                  <option value="male">Nam</option>
+                  <option value="female">Nữ</option>
+                  <option value="notToSay">Không</option>
+                </select>
+              </td>
+              <td class="grid-col-1">
+                <input class="info-input" type="date" name="birthday" value="2003-10-10" readonly>
+              </td>
+              <td class="grid-col-1">
+                <select name="action" onchange="handleChange(event);" data-default="none">
+                  <option value="none">...</option>
+                  <option value="update">Cập nhật</option>
+                  <option value="lock">Khóa</option>
+                  <option value="unlock">Mở khóa</option>
+                  <option value="order">Đơn hàng</option>
+                </select>
+              </td>
+            </tr>
+          <script>
+            
+            function setupAddCustomer(event) {
+              event.preventDefault();
+              document.querySelector(".add-form").classList.add("active");
+            }
+
+            // xử lý khi action được chọn
+            function handleChange(event) {
+              let selectedValue = event.target.value;
+              setDefaultOption("action");
+              event.target.value = selectedValue;
+              console.log("selected value: " + selectedValue);
+              const group = event.currentTarget.closest(".group");
+              selectedValue=selectedValue.toUpperCase();
+              switch (selectedValue) {
+                case "UPDATE":
+                  setInfosStatus(group,true);
+                  break;
+                case "LOCK": {
+                  setInfosStatus(group,false);
+                  setupConfirm(group,'#lock-confirm-modal');
+                  break;
+                }
+                case "UNLOCK": {
+                  setInfosStatus(group,false);
+                  setupConfirm(group,'#unlock-confirm-modal');
+                  break;
+                }
+                default:
+                  setInfosStatus(group,false);
+
+              }
+            }
+
+            // mở modal xác nhận
+            function setupConfirm(group,modalID) {
+              var name = group.querySelector('input[name="name"]').value;
+              openModal(modalID)
+              document.querySelector(modalID).querySelector('.customer-name').innerText = name;
+            }
+
+            function openModal(modalID) {
+              document.querySelector(modalID).classList.add('active');
+            }
+
+            function setInfosStatus(group,status) {
+              const inputs = group.querySelectorAll("input");
+              var status =!status;
+              inputs.forEach((input) => {
+                input.readOnly = status;
+              });
+              group.querySelector("select").disabled = status;
+            }
+
+            function setDefaultOption(name) {
+              document.querySelectorAll(`select[name="${name}"]`).forEach(select => {
+                const defaultValue = select.getAttribute('data-default');
+                  select.value = defaultValue;
+              });
+            }
+
+            // Gọi hàm một lần cho các phần tử hiện có
+            setDefaultOption("gender");
+
+          </script>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="modall" id="lock-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận khóa </br> <span class="customer-name">Nhi</span></p>
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Khóa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modall" id="unlock-confirm-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Xác nhận mở khóa </br> <span class="customer-name">Nhi</span></p>
+
+          <div class="flex-roww" style="margin-top:20px; justify-content: space-around">
+            <button class="btn  btn-fourth btn-cancel" type="button" onclick="closeModal(event);">Hủy</button>
+            <button class="btn btn-primary btn-confirm" onclick="" type="button">Mở khóa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modall" id="message-modal">
+      <div class="modal__overlay" onclick="closeModal(event);">
+        <div class="modall-content grid-col-6" onclick="event.stopPropagation();">
+          <p class="confirm-content" style="text-align: center">Đã tạo tài khoản thành công!
+            </br>Mật khẩu mặc định và mã xác thực đã được gửi tới email</br> <span class="customer-name">email</span></p>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function closeModal(event) {
+        event.currentTarget.closest(".modall").classList.remove("active");
+      }
+    </script>
+
+  </main><!-- End #main -->
+</div>
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../assets/css/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../assets/css/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/css/vendor/chart.js/chart.umd.js"></script>
+<script src="../assets/css/vendor/echarts/echarts.min.js"></script>
+<script src="../assets/css/vendor/quill/quill.min.js"></script>
+<script src="../assets/css/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="../assets/css/vendor/tinymce/tinymce.min.js"></script>
+<script src="../assets/css/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<!--<script src="../assets/js/main.js"></script>-->
+
+</body>
+
+</html>

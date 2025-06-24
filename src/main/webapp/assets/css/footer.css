@@ -1,0 +1,49 @@
+.footer {
+    width: 100%;
+    background-color: var(--light-bg-color);
+    margin-top: auto;
+}
+
+.footer__title {
+    color: black;
+    font-weight: 700;
+}
+
+.footer__content {
+    color: black;
+    font-size: 13px;
+}
+
+.footer__content p {
+    margin: 15px 0;
+}
+
+.footer__content a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 15px 0;
+}
+
+.footer__content a:hover {
+    color: var(--bold-color);
+}
+
+.footer__detail {
+    font-weight: 600;
+    color: var(--bold-color);
+}
+
+.footer__detail:hover {
+    cursor: pointer;
+}
+
+.phone-number:hover {
+    cursor: pointer;
+}
+
+.footer__content img {
+    width: 50%;
+}
+
+
